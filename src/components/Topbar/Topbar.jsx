@@ -7,7 +7,7 @@ export default function Topbar() {
     return (
         <>
             {/* Topbar */}
-            <div className="w-full h-12 flex justify-between items-center px-4">
+            <div className="w-full h-12 flex justify-between items-center px-5">
                 {/* top left */}
                 <div className="">
                     {/* logo */}
@@ -32,7 +32,7 @@ export default function Topbar() {
                         <SettingsIcon />
                     </div>
                     <div className="w-10 rounded-full cursor-pointer overflow-hidden">
-                    <img className='w-full' src="./public/vite.svg" alt="" />
+                    <img className='w-full' src="./public/img/profile.jfif" alt="" />
                     </div>
                 </div>
             </div>
