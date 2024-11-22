@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Cards from '../../components/Cards/Cards';
 
 export default function Home() {
   return (
-    <div className='text-red-700'>Home</div>
+    <Cards/>
   )
 }
