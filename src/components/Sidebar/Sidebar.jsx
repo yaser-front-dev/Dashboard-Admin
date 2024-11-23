@@ -14,28 +14,35 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import ReportIcon from "@mui/icons-material/WorkOutline";
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Sidebar() {
   return (
 
     <>
-      <div className="bg-[rgb(251,251,255)] pl-5 pt-8 rounded-lg h-[calc(100vh - 48px)] w-full sticky">
+      <div className="bg-[rgb(251,251,255)] pl-5 pt-8 rounded-lg h-[calc(100vh - 48px)] w-full">
         {/* menu */}
         <div className="">
           <h3 className='text-[rgb(187,186,186)] text-[14px]'>Dashboard</h3>
           <ul className='pl-2 pr-3'>
-            <Link to="/">
-              <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-[rgb(240,240,255)] text-[rgb(122,122,122)] py-1 px-2 rounded-2xl mb-1 flex items-center cursor-pointer"
+                  : "text-[rgb(122,122,122)] hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1 flex items-center cursor-pointer"
+              }
+            >
+              <li>
                 <LineStyleIcon className='mr-1' />
                 Home
               </li>
-            </Link>
-            <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            </NavLink>
+            <li className='text-[rgb(122,122,122)] cursor-pointer  hover:bg-[rgb(240,240,255)] active:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
               <TimelineIcon className="mr-1" />
               Analytics
             </li>
-            <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            <li className='text-[rgb(122,122,122)] cursor-pointer  hover:bg-[rgb(240,240,255)] active:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
               <TrendingUpIcon className="mr-1" />
               Sales
             </li>
@@ -44,29 +51,47 @@ export default function Sidebar() {
         <div className="mt-2">
           <h3 className='text-[rgb(187,186,186)] text-[14px]'>Quick Menu</h3>
           <ul className='pl-2 pr-3'>
-            <Link to="/Users">
-              <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1 '>
+            <NavLink to="/Users"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-[rgb(240,240,255)] text-[rgb(122,122,122)] py-1 px-2 rounded-2xl mb-1 flex items-center cursor-pointer"
+                  : "text-[rgb(122,122,122)] hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1 flex items-center cursor-pointer"
+              }
+            >
+              <li>
                 <PermIdentityIcon className="mr-1" />
                 Users
               </li>
-            </Link>
-            <Link to="/newUser">
-              <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            </NavLink>
+            <NavLink to="/newUser"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-[rgb(240,240,255)] text-[rgb(122,122,122)] py-1 px-2 rounded-2xl mb-1 flex items-center cursor-pointer"
+                  : "text-[rgb(122,122,122)] hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1 flex items-center cursor-pointer"
+              }
+            >
+              <li>
                 <PermIdentityIcon className="mr-1" />
                 New User
               </li>
-            </Link>
-            <Link to="/Prodcts">
-              <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            </NavLink>
+            <NavLink to="/Prodcts"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-[rgb(240,240,255)] text-[rgb(122,122,122)] py-1 px-2 rounded-2xl mb-1 flex items-center cursor-pointer"
+                  : "text-[rgb(122,122,122)] hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1 flex items-center cursor-pointer"
+              }
+            >
+              <li>
                 <StorefrontIcon className="mr-1" />
                 Products
               </li>
-            </Link>
-            <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            </NavLink>
+            <li className='text-[rgb(122,122,122)] cursor-pointer  hover:bg-[rgb(240,240,255)] active:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
               <AttachMoneyIcon className="mr-1" />
               Transactions
             </li>
-            <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            <li className='text-[rgb(122,122,122)] cursor-pointer  hover:bg-[rgb(240,240,255)] active:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
               <BarChartIcon className="mr-1" />
               Reports
             </li>
@@ -75,15 +100,15 @@ export default function Sidebar() {
         <div className="mt-2">
           <h3 className='text-[rgb(187,186,186)] text-[14px]'>Notifications</h3>
           <ul className='pl-2 pr-3'>
-            <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            <li className='text-[rgb(122,122,122)] cursor-pointer  hover:bg-[rgb(240,240,255)] active:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
               <MailOutlineIcon className="mr-1" />
               Mail
             </li>
-            <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            <li className='text-[rgb(122,122,122)] cursor-pointer  hover:bg-[rgb(240,240,255)] active:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
               <DynamicFeedIcon className="mr-1" />
               Feedback
             </li>
-            <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            <li className='text-[rgb(122,122,122)] cursor-pointer  hover:bg-[rgb(240,240,255)] active:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
               <MessageOutlinedIcon className="mr-1" />
               Messages
             </li>
@@ -92,15 +117,15 @@ export default function Sidebar() {
         <div className="mt-2">
           <h3 className='text-[rgb(187,186,186)] text-[14px]'>Staff</h3>
           <ul className='pl-2 pr-3'>
-            <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            <li className='text-[rgb(122,122,122)] cursor-pointer  hover:bg-[rgb(240,240,255)] active:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
               <ManageAccountsIcon className="mr-1" />
               Manage
             </li>
-            <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            <li className='text-[rgb(122,122,122)] cursor-pointer  hover:bg-[rgb(240,240,255)] active:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
               <TimelineIcon className="mr-1" />
               Analytics
             </li>
-            <li className='text-[rgb(122,122,122)] cursor-pointer hover:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
+            <li className='text-[rgb(122,122,122)] cursor-pointer  hover:bg-[rgb(240,240,255)] active:bg-[rgb(240,240,255)] py-1 px-2 rounded-2xl mb-1'>
               <ReportIcon className="mr-1" />
               Reports
             </li>

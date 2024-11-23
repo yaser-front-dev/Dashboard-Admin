@@ -2,8 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    li:active{
-        background-color: rgb(240,240,255);
-    }
-}

@@ -7,11 +7,15 @@ function App() {
   let router = useRoutes(routes);
   return (
     <>
-    <Topbar/>
-    <div className="w-full flex items-center justify-between">
-      <Sidebar/>
-    {router}
-    </div>
+      <Topbar />
+      <div className="w-full flex justify-between">
+        <div className="basis-3/12">
+          <Sidebar />
+        </div>
+        <div className="basis-9/12 px-5 pt-2">
+          {router}
+        </div>
+      </div>
     </>
   )
 }
