@@ -20,7 +20,7 @@ export default function Sidebar() {
   return (
 
     <>
-      <div className="bg-[rgb(251,251,255)] pl-5 pt-8 rounded-lg h-[calc(100vh - 48px)] w-full">
+      <div className="bg-[rgb(251,251,255)] pl-5 pt-8 rounded-lg w-full sidebar">
         {/* menu */}
         <div className="">
           <h3 className='text-[rgb(187,186,186)] text-[14px]'>Dashboard</h3>
