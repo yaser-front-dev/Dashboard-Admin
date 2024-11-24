@@ -9,10 +9,10 @@ function App() {
     <>
       <Topbar />
       <div className="w-full flex justify-between">
-        <div className="basis-3/12">
+        <div className="flex-1">
           <Sidebar />
         </div>
-        <div className="basis-9/12 px-5 pt-2">
+        <div className="flex-[4] px-5 pt-2">
           {router}
         </div>
       </div>
